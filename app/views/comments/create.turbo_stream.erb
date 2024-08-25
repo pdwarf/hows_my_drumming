@@ -1,0 +1,4 @@
+<%= turbo_stream.append "comments", @comment %>
+<%= turbo_stream.replace "new_comment_form" do %>
+  <%= render "comments/form", drum_session: @drum_session %>
+<% end %>

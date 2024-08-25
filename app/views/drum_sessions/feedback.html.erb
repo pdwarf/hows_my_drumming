@@ -1,0 +1,30 @@
+<h1 class="text-2xl font-bold mb-4">Provide Feedback for <%= @user.email %>'s Drumming</h1>
+
+<% if @drum_session %>
+  <div class="mb-4">
+    <h2 class="text-xl font-bold mb-2">Quick Reaction</h2>
+    <%= render "reactions/form", drum_session: @drum_session %>
+  </div>
+
+  <div class="mt-4">
+    <h2 class="text-xl font-bold mb-2">Leave a Comment</h2>
+    <%= render "comments/form", drum_session: @drum_session %>
+  </div>
+
+  <div class="mt-4">
+    <h2 class="text-xl font-bold mb-2">Current Reactions</h2>
+    <div id="reactions">
+      <%= render @reactions %>
+    </div>
+  </div>
+
+  <div class="mt-4">
+    <h2 class="text-xl font-bold mb-2">Comments</h2>
+    <div id="comments">
+      <%= render @comments %>
+    </div>
+  </div>
+  
+<% else %>
+  <p>There is no active drumming session at the moment.</p>
+<% end %>
