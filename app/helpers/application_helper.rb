@@ -1,16 +1,17 @@
 require 'rqrcode'
 
 module ApplicationHelper
-  def qr_code_as_svg(url)
+  def qr_code_as_svg(url, options = {})
+    defaults = {
+        module_size: 7,
+        use_path: true
+    }
+
+    options = defaults.merge(options)
+
     qrcode = RQRCode::QRCode.new(url)
     
-    svg = qrcode.as_svg(
-      color: "000",
-      shape_rendering: "crispEdges",
-      module_size: 11,
-      standalone: true,
-      use_path: true
-    )
+    svg = qrcode.as_svg(options)
 
     svg.html_safe
   end
