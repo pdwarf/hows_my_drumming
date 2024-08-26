@@ -1,1 +1,4 @@
 <%= turbo_stream.append "reactions", @reaction %>
+<%= turbo_stream.replace "reaction-stats" do %>
+    <%= render "reactions/stats", reactions: @drum_session.reactions %>
+  <% end %>

@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+ @keyframes flash {
+    0% { background-color: #f0f0f0; }
+    50% { background-color: #ffe066; }
+    100% { background-color: #f0f0f0; }
+  }
+  
+  .flash-animation {
+    animation: flash 1s ease-out;
+  }

@@ -7,7 +7,8 @@ class DrumSessionsController < ApplicationController
   end
 
   def show
-    @qr_code_url = user_feedback_url(current_user)
+    @reactions = @drum_session.reactions
+    @comments = @drum_session.comments
   end
 
   def new
@@ -33,6 +34,10 @@ class DrumSessionsController < ApplicationController
     else
       render :no_active_session
     end
+  end
+
+  def qr_code
+    @qr_code_url = user_feedback_url(current_user)
   end
 
   private

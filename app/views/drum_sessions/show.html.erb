@@ -1,33 +1,36 @@
-<h1 class="text-2xl font-bold mb-4">Drumming Session #<%= @drum_session.id %></h1>
-
-<div class="mb-4">
-  Status: <%= @drum_session.active? ? 'Active' : 'Ended' %>
-</div>
-
-<% if @drum_session.active? %>
-  <div class="mb-4">
-    <h2 class="text-xl font-bold mb-2">Your Feedback QR Code</h2>
-    <div class="qr-code">
-      <%= qr_code_as_svg(@qr_code_url) %>
+<div class="container mx-auto px-4 py-8">
+  <div class="flex justify-between items-center mb-8">
+    <h1 class="text-3xl font-bold">Drumming Session #<%= @drum_session.id %></h1>
+    <div class="text-lg">
+      Status: <span class="font-semibold <%= @drum_session.active? ? 'text-green-600' : 'text-red-600' %>">
+        <%= @drum_session.active? ? 'Active' : 'Ended' %>
+      </span>
     </div>
-    <p class="mt-2">Scan this QR code to access the feedback page for your active sessions</p>
   </div>
 
-  <%= button_to "End Session", drum_session_path(@drum_session), method: :patch, class: "bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" %>
-<% end %>
+  <div class="grid gap-8">
+    
+    <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+      <h2 class="text-2xl font-bold mb-4">Reactions</h2>
+      <%= turbo_stream_from [@drum_session, :reactions] %>
+      <%= render "reactions/stats", reactions: @reactions %>
+    </div>
 
-<div class="mt-4">
-  <h2 class="text-xl font-bold mb-2">Reactions</h2>
-  <%= turbo_stream_from [@drum_session, :reactions] %>
-  <div id="reactions">
-    <%= render @drum_session.reactions %>
-  </div>
-</div>
+    <div class="bg-white shadow-md rounded-lg p-6">
+      <h2 class="text-2xl font-bold mb-4">Comments</h2>
+      <%= turbo_stream_from [@drum_session, :comments] %>
+      <div id="comments" class="space-y-4">
+        <%= render @comments %>
+      </div>
+    </div>
+    
+    <% if @drum_session.active? %>
+    <div class="bg-white rounded-lg">
+      <div>
+        <%= button_to "End Session", drum_session_path(@drum_session), method: :patch, class: "w-full bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-4 rounded transition duration-300" %>
+      </div>
+    </div>
+    <% end %>
 
-<div class="mt-4">
-  <h2 class="text-xl font-bold mb-2">Comments</h2>
-  <%= turbo_stream_from [@drum_session, :comments] %>
-  <div id="comments">
-    <%= render @drum_session.comments %>
   </div>
 </div>
