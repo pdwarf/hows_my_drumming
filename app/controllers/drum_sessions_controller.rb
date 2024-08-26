@@ -25,7 +25,7 @@ class DrumSessionsController < ApplicationController
   end
 
   def feedback
-    @user = User.find(params[:user_id])
+    @user = User.find_by!(username: params[:username])
     @drum_session = @user.active_session
     if @drum_session
       @comments = @drum_session.comments
@@ -37,7 +37,7 @@ class DrumSessionsController < ApplicationController
   end
 
   def qr_code
-    @qr_code_url = user_feedback_url(current_user)
+    @qr_code_url = user_feedback_url(username: current_user.username)
   end
 
   private

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
   
   get 'qr_code', to: 'drum_sessions#qr_code', as: 'qr_code'
-  get 'users/:user_id/feedback', to: 'drum_sessions#feedback', as: 'user_feedback'
+  get ':username/feedback', to: 'drum_sessions#feedback', as: 'user_feedback'
   
   root 'drum_sessions#index'
 end
