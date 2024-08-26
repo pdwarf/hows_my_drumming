@@ -19,9 +19,7 @@
 <div class="mt-4">
   <h2 class="text-xl font-bold mb-2">Reactions</h2>
   <%= turbo_stream_from [@drum_session, :reactions] %>
-  <div id="reactions">
-    <%= render @drum_session.reactions %>
-  </div>
+  <%= render "reactions/stats", reactions: @reactions %>
 </div>
 
 <div class="mt-4">

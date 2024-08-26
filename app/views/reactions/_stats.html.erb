@@ -1,0 +1,11 @@
+<div id="reaction-stats" class="grid grid-cols-2 gap-4 mb-6" data-controller="reaction-stats">
+  <% reaction_stats(reactions).each do |emoji, count| %>
+    <div class="bg-gray-100 rounded-lg p-4 flex items-center justify-between" 
+         data-reaction-stats-target="stat"
+         data-emoji="<%= emoji %>" 
+         data-count="<%= count %>">
+      <span class="text-3xl"><%= emoji_for(emoji) %></span>
+      <span class="text-2xl font-bold"><%= count %></span>
+    </div>
+  <% end %>
+</div>

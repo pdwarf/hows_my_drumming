@@ -1,7 +1,7 @@
 class Reaction < ApplicationRecord
   belongs_to :drum_session
 
-  after_create_commit -> { broadcast_append_to [drum_session, :reactions] }
+  after_create_commit -> { broadcast_replace_to [drum_session, :reactions], target: "reaction-stats", partial: "reactions/stats", locals: { reactions: drum_session.reactions } }
 
   enum emoji: {
     thumbs_up: 0,
