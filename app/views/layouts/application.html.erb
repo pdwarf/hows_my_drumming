@@ -16,7 +16,11 @@
     <% unless content_for?(:hide_navbar) %>  
       <header class="bg-white shadow-md no-print">
         <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
-          <%= link_to "DrumFeedback", root_path, class: "text-2xl font-bold text-blue-600" %>
+          <% if user_signed_in? %>
+            <%= link_to "DrumFeedback", drum_sessions_path, class: "text-2xl font-bold text-blue-600" %>
+          <% else %>
+            <%= link_to "DrumFeedback", root_path, class: "text-2xl font-bold text-blue-600" %>
+          <% end %>
           <div class="flex items-center space-x-4">
             <% if user_signed_in? %>
               <%= link_to "My Sessions", drum_sessions_path, class: "text-gray-600 hover:text-blue-600" %>
