@@ -12,6 +12,10 @@ class User < ApplicationRecord
     drum_sessions.find_by(active: true)
   end
 
+  def admin?
+    admin
+  end
+
   def start_new_session
     DrumSession.transaction do
       active_session&.update!(active: false)
