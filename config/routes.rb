@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'pages/home'
   devise_for :users
   resources :drum_sessions, only: [:index, :show, :new, :create, :update] do

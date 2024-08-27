@@ -12,10 +12,10 @@
             <div class="flex flex-row items-center sm:flex-row justify-between items-start sm:items-center">
               <div class="mb-2 sm:mb-0">
                 <p class="text-sm font-medium text-gray-900">
-                  <%= drum_session.created_at.strftime("%b %d, %Y") %>
+                  <%= drum_session.created_at.strftime("%A %b %d, %Y") %>
                 </p>
                 <p class="text-xs text-gray-500">
-                  Session #<%= drum_session.id %>
+                <%= drum_session.created_at.strftime("Session started at %H:%M") %>
                 </p>
               </div>
               <div class="flex flex-wrap items-center gap-2 text-xs">
