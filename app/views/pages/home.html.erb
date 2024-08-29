@@ -4,24 +4,24 @@
   <!-- Hero Section -->
   <header class="bg-blue-600 text-white">
     <div class="container mx-auto px-4 py-16">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Are you a drummer concerned about bothering your neighbors?</h1>
-      <p class="text-xl md:text-2xl mb-8">Get anonymous feedback and keep the peace in your community.</p>
-      <%= link_to "Get Started", new_user_registration_path, class: "bg-white text-blue-600 font-bold py-3 px-6 rounded-full text-lg hover:bg-blue-100 transition duration-300" %>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4"><%= t('home.hero.title') %></h1>
+      <p class="text-xl md:text-2xl mb-8"><%= t('home.hero.subtitle') %></p>
+      <%= link_to t('home.hero.get_started'), new_user_registration_path, class: "bg-white text-blue-600 font-bold py-3 px-6 rounded-full text-lg hover:bg-blue-100 transition duration-300" %>
     </div>
   </header>
 
   <!-- Problem Statement Section -->
   <section class="py-16">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-8 text-center">Do these sound familiar?</h2>
+      <h2 class="text-3xl font-bold mb-8 text-center"><%= t('home.problems.title') %></h2>
       <div class="grid md:grid-cols-2 gap-8">
         <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold mb-4">😓 Worried about noise complaints?</h3>
-          <p>Constant fear of disturbing neighbors can hinder your practice and creativity.</p>
+          <h3 class="text-xl font-semibold mb-4"><%= t('home.problems.noise_complaints.title') %></h3>
+          <p><%= t('home.problems.noise_complaints.description') %></p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold mb-4">🙊 Uncomfortable with direct confrontations?</h3>
-          <p>Face-to-face discussions about noise can be awkward and stressful for everyone involved.</p>
+          <h3 class="text-xl font-semibold mb-4"><%= t('home.problems.confrontations.title') %></h3>
+          <p><%= t('home.problems.confrontations.description') %></p>
         </div>
       </div>
     </div>
@@ -30,22 +30,20 @@
   <!-- Solution Section -->
   <section class="bg-gray-200 py-16">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-8 text-center">Introducing DrumFeedback.com</h2>
+      <h2 class="text-3xl font-bold mb-8 text-center"><%= t('home.solution.title') %></h2>
       <div class="flex flex-col md:flex-row items-center justify-between">
         <div class="md:w-1/2 mb-8 md:mb-0">
-          <h3 class="text-2xl font-semibold mb-4">Anonymous feedback, happy neighbors!</h3>
+          <h3 class="text-2xl font-semibold mb-4"><%= t('home.solution.subtitle') %></h3>
           <ul class="list-disc list-inside space-y-2">
-            <li>Get real-time feedback on your drumming sessions</li>
-            <li>Maintain anonymity for both you and your neighbors</li>
-            <li>Adjust your playing based on community input</li>
-            <li>Build better relationships with your neighbors</li>
+            <% t('home.solution.benefits').each do |benefit| %>
+              <li><%= benefit %></li>
+            <% end %>
           </ul>
         </div>
         <div class="md:w-1/2">
-          <!-- Replace 'screenshot.png' with your actual screenshot -->
           <div class="relative w-64 h-128 mx-auto">
-            <img src="/images/phone-mockup.png" alt="Phone mockup" class="absolute inset-0 w-full h-full">
-            <img src="/images/app-screenshot.png" alt="DrumFeedback App" class="absolute inset-0 w-full h-full object-cover rounded-3xl" style="top: 6%; left: 6%; width: 88%; height: 88%;">
+            <%= image_tag "", alt: t('home.solution.mockup_alt'), class: "absolute inset-0 w-full h-full" %>
+            <%= image_tag "", alt: t('home.solution.screenshot_alt'), class: "absolute inset-0 w-full h-full object-cover rounded-3xl", style: "top: 6%; left: 6%; width: 88%; height: 88%;" %>
           </div>
         </div>
       </div>
@@ -55,9 +53,9 @@
   <!-- Call to Action Section -->
   <section class="py-16">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-4">Ready to drum without worry?</h2>
-      <p class="text-xl mb-8">Join DrumFeedback.com today and create harmony in your neighborhood!</p>
-      <%= link_to "Sign Up Now", new_user_registration_path, class: "bg-blue-600 text-white font-bold py-3 px-6 rounded-full text-lg hover:bg-blue-700 transition duration-300" %>
+      <h2 class="text-3xl font-bold mb-4"><%= t('home.cta.title') %></h2>
+      <p class="text-xl mb-8"><%= t('home.cta.subtitle') %></p>
+      <%= link_to t('home.cta.sign_up'), new_user_registration_path, class: "bg-blue-600 text-white font-bold py-3 px-6 rounded-full text-lg hover:bg-blue-700 transition duration-300" %>
     </div>
   </section>
 </div>

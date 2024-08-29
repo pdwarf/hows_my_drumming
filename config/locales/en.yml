@@ -27,5 +27,116 @@
 #       "yes": yup
 #       enabled: "ON"
 
+# config/locales/en.yml
 en:
-  hello: "Hello world"
+  app_name: "DrumFeedback"
+
+  layout:
+    my_sessions: "My Sessions"
+    qr_code: "QR Code"
+    sign_out: "Sign Out"
+    sign_in: "Sign In"
+    footer: "© %{year} DrumFeedback. All rights reserved."
+
+  devise:
+    registrations:
+      new:
+        sign_up_for_drumfeedback: "Sign up for DrumFeedback"
+        username: "Username"
+        email: "Email address"
+        password: "Password"
+        password_placeholder: "Password (%{length} characters minimum)"
+        confirm_password: "Confirm password"
+        sign_up: "Sign up"
+    sessions:
+      new:
+        log_in_to_drumfeedback: "Log in to DrumFeedback"
+        email_placeholder: "Email address"
+        password_placeholder: "Password"
+        remember_me: "Remember me"
+        forgot_password: "Forgot your password?"
+        log_in: "Log in"
+    shared:
+      links:
+        log_in: "Log in"
+        sign_up: "Sign up"
+        forgot_password: "Forgot your password?"
+        didnt_receive_confirmation_instructions: "Didn't receive confirmation instructions?"
+        didnt_receive_unlock_instructions: "Didn't receive unlock instructions?"
+        sign_in_with_provider: "Sign in with %{provider}"
+
+  home:
+    hero:
+      title: "Are you a drummer concerned about bothering your neighbors?"
+      subtitle: "Get anonymous feedback and keep the peace in your community."
+      get_started: "Get Started"
+    problems:
+      title: "Do these sound familiar?"
+      noise_complaints:
+        title: "😓 Worried about noise complaints?"
+        description: "Constant fear of disturbing neighbors can hinder your practice and creativity."
+      confrontations:
+        title: "🙊 Uncomfortable with direct confrontations?"
+        description: "Face-to-face discussions about noise can be awkward and stressful for everyone involved."
+    solution:
+      title: "Introducing DrumFeedback.com"
+      subtitle: "Anonymous feedback, happy neighbors!"
+      benefits:
+        - "Get real-time feedback on your drumming sessions"
+        - "Maintain anonymity for both you and your neighbors"
+        - "Adjust your playing based on community input"
+        - "Build better relationships with your neighbors"
+      mockup_alt: "Phone mockup"
+      screenshot_alt: "DrumFeedback App"
+    cta:
+      title: "Ready to drum without worry?"
+      subtitle: "Join DrumFeedback.com today and create harmony in your neighborhood!"
+      sign_up: "Sign Up Now"
+  
+  feedback:
+    title: "How's my drumming?"
+    intro: "Hey, I'm %{username}! Your feedback helps me improve. Tap an emoji to share your thoughts!"
+    leave_comment: "Leave a Comment"
+    recent_feedback: "Recent Feedback"
+    no_active_session: "There is no active drumming session at the moment."
+
+  drum_sessions:
+    index:
+      title: "Your Drumming Sessions"
+      start_new_session: "Start New Session"
+      session_started_at: "Session started at %{time}"
+      reactions_count:
+        one: "1 👍"
+        other: "%{count} 👍"
+      comments_count:
+        one: "1 💬"
+        other: "%{count} 💬"
+      active: "Active"
+      ended: "Ended"
+    show:
+      title: "Drumming Session #%{id}"
+      status: "Status"
+      active: "Active"
+      ended: "Ended"
+      reactions: "Reactions"
+      comments: "Comments"
+      end_session: "End Session"
+    no_active_session:
+      title: "No Active Drumming Session"
+      message: "The drummer is not currently playing. Please check back later!"
+    notices:
+      session_started: "New session started successfully."
+      session_ended: "Session ended."
+    alerts:
+      end_session_failed: "Failed to end session."
+
+  time:
+    formats:
+      long: "%A %b %d, %Y"
+      time: "%H:%M"
+
+  qr_code:
+    title: "My Drumming Feedback QR Code"
+    scan_instruction: "Scan this code to provide feedback on my drumming!"
+    description: "This QR code allows you to quickly access a feedback form for my drumming sessions. Your input helps me improve and ensures I'm being a considerate neighbor. Thank you for your participation!"
+    print_button: "Print QR Code"

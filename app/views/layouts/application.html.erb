@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="h-full">
   <head>
-    <title>DrumFeedback.com</title>
+    <title><%= t('app_name') %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -17,17 +17,17 @@
       <header class="bg-white shadow-md no-print">
         <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
           <% if user_signed_in? %>
-            <%= link_to "DrumFeedback", drum_sessions_path, class: "text-2xl font-bold text-blue-600" %>
+            <%= link_to t('app_name'), drum_sessions_path, class: "text-2xl font-bold text-blue-600" %>
           <% else %>
-            <%= link_to "DrumFeedback", root_path, class: "text-2xl font-bold text-blue-600" %>
+            <%= link_to t('app_name'), root_path, class: "text-2xl font-bold text-blue-600" %>
           <% end %>
           <div class="flex items-center space-x-4">
             <% if user_signed_in? %>
-              <%= link_to "My Sessions", drum_sessions_path, class: "text-gray-600 hover:text-blue-600" %>
-              <%= link_to "QR Code", qr_code_path, class: "text-gray-600 hover:text-blue-600", target: "_blank", rel: "noopener noreferrer" %>
-              <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded" %>
+              <%= link_to t('layout.my_sessions'), drum_sessions_path, class: "text-gray-600 hover:text-blue-600" %>
+              <%= link_to t('layout.qr_code'), qr_code_path, class: "text-gray-600 hover:text-blue-600", target: "_blank", rel: "noopener noreferrer" %>
+              <%= button_to t('layout.sign_out'), destroy_user_session_path, method: :delete, class: "bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded" %>
             <% else %>
-              <%= link_to "Sign In", new_user_session_path, class: "bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded" %>
+              <%= link_to t('layout.sign_in'), new_user_session_path, class: "bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded" %>
             <% end %>
           </div>
         </nav>
@@ -52,7 +52,7 @@
 
     <footer class="bg-white py-4 mt-auto">
       <div class="container mx-auto px-4 text-center text-gray-500">
-        &copy; <%= Time.current.year %> DrumFeedback. All rights reserved.
+      <%= t('layout.footer', year: Time.current.year) %>
       </div>
     </footer>
   </body>
