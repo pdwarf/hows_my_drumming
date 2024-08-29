@@ -1,0 +1,165 @@
+# config/locales/de.yml
+de:
+  app_name: "DrumFeedback"
+  
+  layout:
+    my_sessions: "Meine Sitzungen"
+    qr_code: "QR-Code"
+    sign_out: "Abmelden"
+    sign_in: "Anmelden"
+    footer: "© %{year} DrumFeedback. Alle Rechte vorbehalten."
+
+  devise:
+    registrations:
+      new:
+        sign_up_for_drumfeedback: "Registrieren bei DrumFeedback"
+        username: "Benutzername"
+        email: "E-Mail-Adresse"
+        password: "Passwort"
+        password_placeholder: "Passwort (mindestens %{length} Zeichen)"
+        confirm_password: "Passwort bestätigen"
+        sign_up: "Registrieren"
+    sessions:
+      new:
+        log_in_to_drumfeedback: "Bei DrumFeedback anmelden"
+        email_placeholder: "E-Mail-Adresse"
+        password_placeholder: "Passwort"
+        remember_me: "Angemeldet bleiben"
+        forgot_password: "Passwort vergessen?"
+        log_in: "Anmelden"
+    shared:
+      links:
+        log_in: "Anmelden"
+        sign_up: "Registrieren"
+        forgot_password: "Passwort vergessen?"
+        didnt_receive_confirmation_instructions: "Keine Anweisungen zur Bestätigung erhalten?"
+        didnt_receive_unlock_instructions: "Keine Anweisungen zum Entsperren erhalten?"
+        sign_in_with_provider: "Mit %{provider} anmelden"
+
+  home:
+    hero:
+      title: "Bist du ein Schlagzeuger und machst dir Sorgen, deine Nachbarn zu stören?"
+      subtitle: "Erhalte anonymes Feedback und bewahre den Frieden in deiner Gemeinschaft."
+      get_started: "Jetzt Starten"
+    problems:
+      title: "Kommen dir diese Situationen bekannt vor?"
+      noise_complaints:
+        title: "😓 Besorgt über Lärmbelästigung?"
+        description: "Die ständige Angst, Nachbarn zu stören, kann dein Üben und deine Kreativität beeinträchtigen."
+      confrontations:
+        title: "🙊 Unangenehme direkte Konfrontationen?"
+        description: "Persönliche Gespräche über Lärm können für alle Beteiligten unangenehm und stressig sein."
+    solution:
+      title: "Wir stellen vor: DrumFeedback.com"
+      subtitle: "Anonymes Feedback, zufriedene Nachbarn!"
+      benefits:
+        - "Erhalte Echtzeit-Feedback zu deinen Schlagzeugsitzungen"
+        - "Wahre die Anonymität für dich und deine Nachbarn"
+        - "Passe dein Spiel basierend auf dem Feedback der Gemeinschaft an"
+        - "Baue bessere Beziehungen zu deinen Nachbarn auf"
+      mockup_alt: "Telefon-Mockup"
+      screenshot_alt: "DrumFeedback App"
+    cta:
+      title: "Bereit, ohne Sorgen zu trommeln?"
+      subtitle: "Tritt DrumFeedback.com noch heute bei und schaffe Harmonie in deiner Nachbarschaft!"
+      sign_up: "Jetzt Registrieren"
+
+  feedback:
+    title: "Wie ist mein Schlagzeugspiel?"
+    intro: "Hey, ich bin %{username}! Dein Feedback hilft mir, mich zu verbessern. Tippe auf ein Emoji, um deine Meinung zu teilen!"
+    leave_comment: "Hinterlasse einen Kommentar"
+    recent_feedback: "Aktuelle Rückmeldungen"
+    no_active_session: "Momentan gibt es keine aktive Schlagzeugsitzung."
+
+  drum_sessions:
+    index:
+      title: "Deine Schlagzeugsitzungen"
+      start_new_session: "Neue Sitzung starten"
+      session_started_at: "Sitzung begann um %{time}"
+      reactions_count:
+        one: "1 👍"
+        other: "%{count} 👍"
+      comments_count:
+        one: "1 💬"
+        other: "%{count} 💬"
+      active: "Aktiv"
+      ended: "Beendet"
+    show:
+      title: "Schlagzeugsitzung #%{id}"
+      status: "Status"
+      active: "Aktiv"
+      ended: "Beendet"
+      reactions: "Reaktionen"
+      comments: "Kommentare"
+      end_session: "Sitzung beenden"
+    no_active_session:
+      title: "Keine aktive Schlagzeugsitzung"
+      message: "Der Schlagzeuger spielt derzeit nicht. Bitte schau später wieder vorbei!"
+    notices:
+      session_started: "Neue Sitzung erfolgreich gestartet."
+      session_ended: "Sitzung beendet."
+    alerts:
+      end_session_failed: "Sitzung konnte nicht beendet werden."
+
+  date:
+    day_names:
+      - Sonntag
+      - Montag
+      - Dienstag
+      - Mittwoch
+      - Donnerstag
+      - Freitag
+      - Samstag
+    abbr_day_names:
+      - So
+      - Mo
+      - Di
+      - Mi
+      - Do
+      - Fr
+      - Sa
+    month_names:
+      - ~
+      - Januar
+      - Februar
+      - März
+      - April
+      - Mai
+      - Juni
+      - Juli
+      - August
+      - September
+      - Oktober
+      - November
+      - Dezember
+    abbr_month_names:
+      - ~
+      - Jan
+      - Feb
+      - Mär
+      - Apr
+      - Mai
+      - Jun
+      - Jul
+      - Aug
+      - Sep
+      - Okt
+      - Nov
+      - Dez
+    formats:
+      default: "%d.%m.%Y"
+      long: "%e. %B %Y"
+      short: "%e. %b"
+
+  time:
+    formats:
+      default: "%A, %d. %B %Y"
+      long: "%A, %d. %B %Y"
+      short: "%d. %B, %H:%M Uhr"
+      time: "%H:%M Uhr"
+
+  qr_code:
+    title: "Mein Schlagzeug-Feedback QR-Code"
+    scan_instruction: "Scanne diesen Code, um Feedback zu meinem Schlagzeugspiel zu geben!"
+    description: "Dieser QR-Code ermöglicht dir schnellen Zugang zu einem Feedback-Formular für meine Schlagzeugsitzungen. Deine Rückmeldung hilft mir, mich zu verbessern und sicherzustellen, dass ich ein rücksichtsvoller Nachbar bin. Vielen Dank für deine Teilnahme!"
+    print_button: "QR-Code drucken"

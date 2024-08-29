@@ -1,9 +1,9 @@
 <div class="container mx-auto px-4 py-8">
   <div class="flex justify-between items-center mb-8">
-    <h1 class="text-3xl font-bold">Drumming Session #<%= @drum_session.id %></h1>
+    <h1 class="text-3xl font-bold"><%= t('drum_sessions.show.title', id: @drum_session.id) %></h1>
     <div class="text-lg">
-      Status: <span class="font-semibold <%= @drum_session.active? ? 'text-green-600' : 'text-red-600' %>">
-        <%= @drum_session.active? ? 'Active' : 'Ended' %>
+      <%= t('drum_sessions.show.status') %>: <span class="font-semibold <%= @drum_session.active? ? 'text-green-600' : 'text-red-600' %>">
+        <%= @drum_session.active? ? t('drum_sessions.show.active') : t('drum_sessions.show.ended') %>
       </span>
     </div>
   </div>
@@ -11,13 +11,13 @@
   <div class="grid gap-8">
     
     <div class="bg-white shadow-md rounded-lg p-6 mb-6">
-      <h2 class="text-2xl font-bold mb-4">Reactions</h2>
+      <h2 class="text-2xl font-bold mb-4"><%= t('drum_sessions.show.reactions') %></h2>
       <%= turbo_stream_from [@drum_session, :reactions] %>
       <%= render "reactions/stats", reactions: @reactions %>
     </div>
 
     <div class="bg-white shadow-md rounded-lg p-6">
-      <h2 class="text-2xl font-bold mb-4">Comments</h2>
+      <h2 class="text-2xl font-bold mb-4"><%= t('drum_sessions.show.comments') %></h2>
       <%= turbo_stream_from [@drum_session, :comments] %>
       <div id="comments" class="space-y-4">
         <%= render @comments %>
@@ -27,7 +27,7 @@
     <% if @drum_session.active? %>
     <div class="bg-white rounded-lg">
       <div>
-        <%= button_to "End Session", drum_session_path(@drum_session), method: :patch, class: "w-full bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-4 rounded transition duration-300" %>
+        <%= button_to t('drum_sessions.show.end_session'), drum_session_path(@drum_session), method: :patch, class: "w-full bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-4 rounded transition duration-300" %>
       </div>
     </div>
     <% end %>

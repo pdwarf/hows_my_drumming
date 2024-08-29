@@ -13,14 +13,14 @@ class DrumSessionsController < ApplicationController
 
   def new
     @drum_session = current_user.start_new_session
-    redirect_to @drum_session, notice: 'New session started successfully.'
+    redirect_to @drum_session, notice: t('drum_sessions.notices.session_started')
   end
 
   def update
     if @drum_session.update(active: false)
-      redirect_to drum_sessions_path, notice: 'Session ended.'
+      redirect_to drum_sessions_path, notice: t('drum_sessions.notices.session_ended')
     else
-      redirect_to @drum_session, alert: 'Failed to end session.'
+      redirect_to @drum_session, alert: t('drum_sessions.alerts.end_session_failed')
     end
   end
 
