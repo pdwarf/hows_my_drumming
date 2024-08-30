@@ -2,8 +2,8 @@
 
 <div class="bg-gray-100 min-h-screen">
   <!-- Hero Section -->
-  <header class="bg-blue-600 text-white">
-    <div class="container mx-auto px-4 py-16">
+  <header class="bg-blue-600 text-white bg-cover bg-center" style="background-image: url('<%= asset_path('out-0.webp') %>'); transform: scaleX(-1);">
+    <div class="container mx-auto px-4 py-16 bg-blue-600 bg-opacity-50" style="transform: scaleX(-1);">
       <h1 class="text-4xl md:text-5xl font-bold mb-4"><%= t('home.hero.title') %></h1>
       <p class="text-xl md:text-2xl mb-8"><%= t('home.hero.subtitle') %></p>
       <%= link_to t('home.hero.get_started'), new_user_registration_path, class: "bg-white text-blue-600 font-bold py-3 px-6 rounded-full text-lg hover:bg-blue-100 transition duration-300" %>

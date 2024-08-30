@@ -7,8 +7,28 @@
     0% { background-color: #f0f0f0; }
     50% { background-color: #ffe066; }
     100% { background-color: #f0f0f0; }
-  }
+}
   
-  .flash-animation {
+.flash-animation {
     animation: flash 1s ease-out;
-  }
+}
+
+@keyframes sparkle {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.btn-sparkle {
+    background-image: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff, #00ffff);
+    background-size: 300% 300%;
+    color: white;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    animation: sparkle 5s ease infinite;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}

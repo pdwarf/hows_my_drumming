@@ -136,7 +136,7 @@ en:
       time: "%H:%M"
 
   qr_code:
-    title: "My Drumming Feedback QR Code"
-    scan_instruction: "Scan this code to provide feedback on my drumming!"
-    description: "This QR code allows you to quickly access a feedback form for my drumming sessions. Your input helps me improve and ensures I'm being a considerate neighbor. Thank you for your participation!"
+    title: "Is My Drumming Bothering You?"
+    scan_instruction: "Scan this code to provide live feedback on my drumming!"
+    description: "Your feedback will show up in real-time on a screen next to my drum set. Your input helps me improve and ensures I'm being a considerate neighbor. Thank you!"
     print_button: "Print QR Code"
