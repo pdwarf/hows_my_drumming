@@ -159,7 +159,7 @@ de:
       time: "%H:%M Uhr"
 
   qr_code:
-    title: "Mein Schlagzeug-Feedback QR-Code"
-    scan_instruction: "Scanne diesen Code, um Feedback zu meinem Schlagzeugspiel zu geben!"
-    description: "Dieser QR-Code ermöglicht dir schnellen Zugang zu einem Feedback-Formular für meine Schlagzeugsitzungen. Deine Rückmeldung hilft mir, mich zu verbessern und sicherzustellen, dass ich ein rücksichtsvoller Nachbar bin. Vielen Dank für deine Teilnahme!"
+    title: "Stört dich mein Schlagzeugspiel?"
+    scan_instruction: "Scanne diesen Code, um mir Live-Feedback zu meinem Schlagzeugspiel zu geben!"
+    description: "Dein Feedback erscheint sofort auf einem einem Bildschirm, welchen ich beim Schlagzeugspiel sehen kann. So hilfst du mir, mich zu verbessern und sicherzustellen, dass ich ein rücksichtsvoller Nachbar bin. Vielen Dank!"
     print_button: "QR-Code drucken"
