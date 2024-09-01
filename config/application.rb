@@ -32,5 +32,8 @@ module HowsMyDrumming
 
     # Load locale files from nested folders
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+
+    # Make URLs work correctly leveraging the www subdomain necessary with GoDaddy
+    config.action_controller.default_url_options = { host: 'www.drumfeedback.com', protocol: 'https' }
   end
 end
