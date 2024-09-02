@@ -28,27 +28,24 @@
   </section>
 
   <!-- Solution Section -->
-  <section class="bg-gray-200 py-16">
+    <section class="bg-gray-200 py-16">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-8 text-center"><%= t('home.solution.title') %></h2>
-      <div class="flex flex-col md:flex-row items-center justify-between">
-        <div class="md:w-1/2 mb-8 md:mb-0">
-          <h3 class="text-2xl font-semibold mb-4"><%= t('home.solution.subtitle') %></h3>
-          <ul class="list-disc list-inside space-y-2">
+        <h2 class="text-3xl font-bold mb-8 text-center"><%= t('home.solution.title') %></h2>
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+        <div class="w-full md:w-1/2">
+            <h3 class="text-2xl font-semibold mb-4"><%= t('home.solution.subtitle') %></h3>
+            <ul class="list-disc list-inside space-y-4">
             <% t('home.solution.benefits').each do |benefit| %>
-              <li><%= benefit %></li>
+                <li><%= benefit %></li>
             <% end %>
-          </ul>
+            </ul>
         </div>
-        <div class="md:w-1/2">
-          <div class="relative w-64 h-128 mx-auto">
-            <%= image_tag "", alt: t('home.solution.mockup_alt'), class: "absolute inset-0 w-full h-full" %>
-            <%= image_tag "", alt: t('home.solution.screenshot_alt'), class: "absolute inset-0 w-full h-full object-cover rounded-3xl", style: "top: 6%; left: 6%; width: 88%; height: 88%;" %>
-          </div>
+        <div class="w-full md:w-1/2">
+            <%= image_tag "drumfeedback-screenshot.png", alt: t('home.solution.screenshot_alt'), class: "w-full max-w-md mx-auto" %>
         </div>
-      </div>
+        </div>
     </div>
-  </section>
+    </section>
 
   <!-- Call to Action Section -->
   <section class="py-16">
