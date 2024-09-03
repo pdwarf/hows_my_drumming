@@ -11,7 +11,8 @@ class Reaction < ApplicationRecord
     thinking_face: 4,
     thumbs_down: 5,
     shushing_face: 6,
-    person_gesturing_no: 7
+    person_gesturing_no: 7,
+    sparkling_heart: 8
   }
 
   validates :emoji, presence: true

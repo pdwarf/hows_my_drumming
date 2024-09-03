@@ -12,7 +12,8 @@ module ReactionsHelper
         thinking_face: "🤔",
         thumbs_down: "👎",
         shushing_face: "🤫",
-        person_gesturing_no: "🙅"
+        person_gesturing_no: "🙅",
+        sparkling_heart: "💖"
       }[emoji_key.to_sym]
     end
   end
