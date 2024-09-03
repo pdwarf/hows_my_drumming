@@ -25,7 +25,7 @@ class DrumSessionsController < ApplicationController
   end
 
   def feedback
-    @user = User.find_by!(username: params[:username])
+    @user = User.find_by!(username: params[:username].downcase)
     @drum_session = @user.active_session
     if @drum_session
       @comments = @drum_session.comments
