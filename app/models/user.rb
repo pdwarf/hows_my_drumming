@@ -21,7 +21,7 @@ class User < ApplicationRecord
 
   def start_new_session
     DrumSession.transaction do
-      active_session&.update!(active: false)
+      drum_sessions.update_all(active: false)
       drum_sessions.create!(active: true)
     end
   end

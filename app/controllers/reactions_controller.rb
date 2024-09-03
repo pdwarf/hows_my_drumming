@@ -1,6 +1,7 @@
 class ReactionsController < ApplicationController
+  before_action :set_drum_session
+
   def create
-    @drum_session = DrumSession.find(params[:drum_session_id])
     @reaction = @drum_session.reactions.new(reaction_params)
     
     if @reaction.save
@@ -14,6 +15,10 @@ class ReactionsController < ApplicationController
   end
 
   private
+
+  def set_drum_session
+    @drum_session = DrumSession.find(params[:drum_session_id])
+  end
 
   def reaction_params
     params.require(:reaction).permit(:emoji)
