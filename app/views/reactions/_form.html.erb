@@ -1,11 +1,14 @@
-<%= form_with(model: [drum_session, Reaction.new], local: false, class: "grid grid-cols-2 gap-4") do |form| %>
+<%= form_with(model: [drum_session, Reaction.new], local: false, class: "grid grid-cols-3 gap-4") do |form| %>
     <% emoji_map = {
       thumbs_up: "👍",
       confetti: "🎉",
       horns: "🤘",
       dancer: "💃",
       thinking_face: "🤔",
-      thumbs_down: "👎"
+      thumbs_down: "👎",
+      shushing_face: "🤫",
+      person_gesturing_no: "🙅",
+      sparkling_heart: "💖"
     } %>
     <% Reaction.emojis.keys.each do |emoji| %>
       <%= form.button emoji_map[emoji.to_sym], value: emoji, name: "reaction[emoji]", class: "text-5xl py-8 rounded-lg shadow hover:shadow-lg transition-shadow duration-200 ease-in-out" %>

@@ -10,7 +10,10 @@ module ReactionsHelper
         horns: "🤘",
         dancer: "💃",
         thinking_face: "🤔",
-        thumbs_down: "👎"
+        thumbs_down: "👎",
+        shushing_face: "🤫",
+        person_gesturing_no: "🙅",
+        sparkling_heart: "💖"
       }[emoji_key.to_sym]
     end
   end
