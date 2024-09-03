@@ -9,7 +9,9 @@ class Reaction < ApplicationRecord
     horns: 2,
     dancer: 3,
     thinking_face: 4,
-    thumbs_down: 5
+    thumbs_down: 5,
+    shushing_face: 6,
+    person_gesturing_no: 7
   }
 
   validates :emoji, presence: true
