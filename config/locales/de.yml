@@ -27,6 +27,11 @@ de:
         remember_me: "Angemeldet bleiben"
         forgot_password: "Passwort vergessen?"
         log_in: "Anmelden"
+    passwords:
+      new:
+        forgot_your_password: "Passwort vergessen?"
+        email: "E-Mail"
+        send_reset_instructions: "Anweisungen zum Zurücksetzen senden"
     shared:
       links:
         log_in: "Anmelden"

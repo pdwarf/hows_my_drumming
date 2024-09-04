@@ -56,6 +56,11 @@ en:
         remember_me: "Remember me"
         forgot_password: "Forgot your password?"
         log_in: "Log in"
+    passwords:
+      new:
+        forgot_your_password: "Forgot your password?"
+        email: "Email"
+        send_reset_instructions: "Send me reset password instructions"
     shared:
       links:
         log_in: "Log in"
