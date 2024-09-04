@@ -155,3 +155,6 @@ en:
 
   comments:
     time_ago: "%{time} ago"
+    form:
+      placeholder: "Share your thoughts..."
+      submit: "Send Comment"
