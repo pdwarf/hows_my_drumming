@@ -139,3 +139,6 @@ en:
     scan_instruction: "Scan this code to provide live feedback on my drumming!"
     description: "Your feedback will show up in real-time on a screen next to my drum set. Your input helps me improve and ensures I'm being a considerate neighbor. Thank you!"
     print_button: "Print QR Code"
+
+  comments:
+    time_ago: "%{time} ago"
