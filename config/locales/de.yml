@@ -189,7 +189,7 @@ de:
         one: "weniger als eine Sekunde"
         other: "weniger als %{count} Sekunden"
       less_than_x_minutes:
-        one: "weniger als eine Minute"
+        one: "weniger als einer Minute"
         other: "weniger als %{count} Minuten"
       over_x_years:
         one: "mehr als ein Jahr"
@@ -198,7 +198,7 @@ de:
         one: "eine Sekunde"
         other: "%{count} Sekunden"
       x_minutes:
-        one: "eine Minute"
+        one: "einer Minute"
         other: "%{count} Minuten"
       x_days:
         one: "ein Tag"
@@ -222,3 +222,6 @@ de:
 
   comments:
     time_ago: "vor %{time}"
+    form:
+      placeholder: "Teile deine Gedanken..."
+      submit: "Kommentar senden"
