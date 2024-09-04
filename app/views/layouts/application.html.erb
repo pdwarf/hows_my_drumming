@@ -18,7 +18,7 @@
       <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
         <% if user_signed_in? %>
           <%= link_to drum_sessions_path, class: "flex items-center" do %>
-            <%= image_tag "drumfeedback-com_logo2x_text-only.png", alt: t('app_name'), class: "h-14 w-auto" %>
+            <%= image_tag "drumfeedback-com_logo2x_text-only.png", alt: t('app_name'), class: "h-10 md:h-14 w-auto" %>
           <% end %>
         <% else %>
           <%= link_to root_path, class: "flex items-center" do %>

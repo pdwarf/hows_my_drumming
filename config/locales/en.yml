@@ -56,6 +56,19 @@ en:
         remember_me: "Remember me"
         forgot_password: "Forgot your password?"
         log_in: "Log in"
+    passwords:
+      new:
+        forgot_your_password: "Forgot your password?"
+        email: "Email"
+        send_reset_instructions: "Send me reset password instructions"
+      edit:
+        change_your_password: "Change your password"
+        new_password: "New password"
+        confirm_new_password: "Confirm new password"
+        change_my_password: "Change my password"
+        minimum_password_length:
+          one: "(%{count} character minimum)"
+          other: "(%{count} characters minimum)"
     shared:
       links:
         log_in: "Log in"
@@ -139,3 +152,6 @@ en:
     scan_instruction: "Scan this code to provide live feedback on my drumming!"
     description: "Your feedback will show up in real-time on a screen next to my drum set. Your input helps me improve and ensures I'm being a considerate neighbor. Thank you!"
     print_button: "Print QR Code"
+
+  comments:
+    time_ago: "%{time} ago"

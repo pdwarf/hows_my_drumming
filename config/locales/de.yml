@@ -27,6 +27,19 @@ de:
         remember_me: "Angemeldet bleiben"
         forgot_password: "Passwort vergessen?"
         log_in: "Anmelden"
+    passwords:
+      new:
+        forgot_your_password: "Passwort vergessen?"
+        email: "E-Mail"
+        send_reset_instructions: "Anweisungen zum Zurücksetzen senden"
+      edit:
+        change_your_password: "Passwort ändern"
+        new_password: "Neues Passwort"
+        confirm_new_password: "Neues Passwort bestätigen"
+        change_my_password: "Mein Passwort ändern"
+        minimum_password_length:
+          one: "(Mindestens %{count} Zeichen)"
+          other: "(Mindestens %{count} Zeichen)"
     shared:
       links:
         log_in: "Anmelden"
@@ -157,8 +170,55 @@ de:
       short: "%d. %B, %H:%M Uhr"
       time: "%H:%M Uhr"
 
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: "etwa eine Stunde"
+        other: "etwa %{count} Stunden"
+      about_x_months:
+        one: "etwa ein Monat"
+        other: "etwa %{count} Monate"
+      about_x_years:
+        one: "etwa ein Jahr"
+        other: "etwa %{count} Jahre"
+      almost_x_years:
+        one: "fast ein Jahr"
+        other: "fast %{count} Jahre"
+      half_a_minute: "eine halbe Minute"
+      less_than_x_seconds:
+        one: "weniger als eine Sekunde"
+        other: "weniger als %{count} Sekunden"
+      less_than_x_minutes:
+        one: "weniger als eine Minute"
+        other: "weniger als %{count} Minuten"
+      over_x_years:
+        one: "mehr als ein Jahr"
+        other: "mehr als %{count} Jahre"
+      x_seconds:
+        one: "eine Sekunde"
+        other: "%{count} Sekunden"
+      x_minutes:
+        one: "eine Minute"
+        other: "%{count} Minuten"
+      x_days:
+        one: "ein Tag"
+        other: "%{count} Tage"
+      x_months:
+        one: "ein Monat"
+        other: "%{count} Monate"
+    prompts:
+      second: "Sekunde"
+      minute: "Minute"
+      hour: "Stunde"
+      day: "Tag"
+      month: "Monat"
+      year: "Jahr"
+
   qr_code:
     title: "Stört dich mein Schlagzeugspiel?"
     scan_instruction: "Scanne diesen Code, um mir Live-Feedback zu meinem Schlagzeugspiel zu geben!"
     description: "Dein Feedback erscheint sofort auf einem einem Bildschirm, welchen ich beim Schlagzeugspiel sehen kann. So hilfst du mir, mich zu verbessern und sicherzustellen, dass ich ein rücksichtsvoller Nachbar bin. Vielen Dank!"
     print_button: "QR-Code drucken"
+
+  comments:
+    time_ago: "vor %{time}"
