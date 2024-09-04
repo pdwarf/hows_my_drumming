@@ -32,6 +32,14 @@ de:
         forgot_your_password: "Passwort vergessen?"
         email: "E-Mail"
         send_reset_instructions: "Anweisungen zum Zurücksetzen senden"
+      edit:
+        change_your_password: "Passwort ändern"
+        new_password: "Neues Passwort"
+        confirm_new_password: "Neues Passwort bestätigen"
+        change_my_password: "Mein Passwort ändern"
+        minimum_password_length:
+          one: "(Mindestens %{count} Zeichen)"
+          other: "(Mindestens %{count} Zeichen)"
     shared:
       links:
         log_in: "Anmelden"

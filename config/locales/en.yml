@@ -61,6 +61,14 @@ en:
         forgot_your_password: "Forgot your password?"
         email: "Email"
         send_reset_instructions: "Send me reset password instructions"
+      edit:
+        change_your_password: "Change your password"
+        new_password: "New password"
+        confirm_new_password: "Confirm new password"
+        change_my_password: "Change my password"
+        minimum_password_length:
+          one: "(%{count} character minimum)"
+          other: "(%{count} characters minimum)"
     shared:
       links:
         log_in: "Log in"
